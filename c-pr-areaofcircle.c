@@ -1,29 +1,15 @@
 #include <stdio.h>
-#include<conio.h>
-
 #define PI 3.14
-// Symbolic constant
 
-void main( )
+int main(void) {
+    int radius;
+    double area;
 
-{
+    printf("radius =");
+    scanf("%d", &radius);
 
-float radius,area;
+    area = PI * radius * radius;
+    printf("area = %f", (float)area);
 
-clrscr();
-/* variable declarations */
-
-printf (“radius =”);
-/ * output statement (prompt) /*
-
-scanf (“%f”, &radius) ;
-/* input statement * /
-
-area = PI* radius * radius;
-/* assignment statement */
-
-printf ("area = %f",area) ;
-
-getch();
-
+    return 0;
 }
