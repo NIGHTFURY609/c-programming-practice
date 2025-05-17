@@ -1,28 +1,14 @@
 #include <stdio.h>
-#include <string.h>
-
-// Define the structure
-struct Student {
-    char name[50];
-    int age;
-};
-
-// Function that takes a pointer to a Student struct
-void printStudent(struct Student *s) {
-    printf("Name: %s\n", s->name);
-    printf("Age: %d\n", s->age);
-}
 
 int main() {
-    // Create a Student object
-    struct Student stu1;
+    char name[] = "Alex";
+    puts("Your name is:");
+    
+    for (int i = 0; name[i] != '\0'; i++) {
+        putchar(name[i]);
+    }
 
-    // Fill the struct
-    strcpy(stu1.name, "Alice");
-    stu1.age = 20;
-
-    // Pass the address of stu1 to the function
-    printStudent(&stu1);
+    putchar('\n');  // move to next line
 
     return 0;
 }

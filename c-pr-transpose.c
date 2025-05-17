@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 int main() {
     int n, i, j;
@@ -30,18 +29,18 @@ int main() {
     }
 
     // Check for symmetry
-    bool isSymmetric = true;
-    for (i = 0; i < n && isSymmetric; i++) {
+    int  isSymmetric = 1;
+    for (i = 0; i < n && isSymmetric==1; i++) {
         for (j = 0; j < n; j++) {
             if (matrix[i][j] != transpose[i][j]) {
-                isSymmetric = false;
+                isSymmetric = 0;
                 break;
             }
         }
     }
 
     // Output result
-    if (isSymmetric) {
+    if (isSymmetric==1) {
         printf("The matrix is symmetric.\n");
     } else {
         printf("The matrix is not symmetric.\n");
