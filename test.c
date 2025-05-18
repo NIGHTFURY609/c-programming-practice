@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char name[] = "Alex";
-    puts("Your name is:");
-    
-    for (int i = 0; name[i] != '\0'; i++) {
-        putchar(name[i]);
+    char str[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    scanf("%s",str);  // Use fgets(str, 100, stdin) instead in modern code
+
+    while (str[i] != '\0') {
+        i++;
     }
 
-    putchar('\n');  // move to next line
-
+    printf("Length of the string: %d\n", i);
     return 0;
 }
